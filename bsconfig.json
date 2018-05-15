@@ -6,7 +6,7 @@
   "sources": [
     {
       "dir" : "src",
-      "subdirs" : true
+      "public": "all"
     },
     {
       "dir": "examples",
