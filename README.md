@@ -1,18 +1,45 @@
-# Basic Reason Template
+# bs-ws
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+Simple node websocket implementation for Reason
 
-# Build
-```
-npm run build
-```
-
-# Build + Watch
+# Installation
 
 ```
-npm run start
+npm install --save bs-ws
+```
+or
+```
+npm i -S bs-ws
 ```
 
+Then add bs-ws to bs-dependencies in your bsconfig.json:
+```
+{
+  ...
+  "bs-dependencies": ["bs-ws"]
+}
+```
 
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+# Examples
+
+Simple Example
+```
+let ws = WebSocket.make("wss://www.example.com");
+WebSocket.(
+ws
+|. on(`message((data) => Js.log("Message: " ++ data)))
+|. on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
+|. on(`open_(() => Js.log("Opened!")))
+);
+```
+
+Example with subprotocols
+```
+let ws = WebSocket.makeWithProtocols("wss://gateway.discord.gg/?v=6&encoding=json", [| "soap" |]);
+WebSocket.(
+ws
+|. on(`message((data) => Js.log("Message: " ++ data)))
+|. on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
+|. on(`open_(() => Js.log("Opened!")))
+);
+```

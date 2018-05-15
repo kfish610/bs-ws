@@ -1,5 +1,5 @@
 {
-  "name": "bs-websocket",
+  "name": "bs-ws",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
@@ -9,14 +9,19 @@
   "keywords": [
     "BuckleScript"
   ],
-  "author": "kfish610",
+  "author": "kfish610 <kfish610@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^3.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kfish610/bs-websocket.git"
+  "repository": "github:kfish610/bs-ws",
+  "description": "ws bindings for Reason",
+  "dependencies": {
+    "ws": "^5.1.1"
   },
-  "description": "WebSocket bindings for Reason"
+  "homepage": "https://github.com/kfish610/bs-ws",
+  "bugs": {
+    "url": "https://github.com/kfish610/bs-ws/issues",
+    "email": "kfish610@gmail.com"
+  }
 }
