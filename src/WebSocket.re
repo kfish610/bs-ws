@@ -6,6 +6,7 @@ type event = [
   | `open_(unit => unit)
   | `ping(Node.Buffer.t => unit)
   | `pong(Node.Buffer.t => unit)
+  | `error(Dom.errorEvent => unit)
 ];
 
 type readyStateType = 
@@ -32,6 +33,7 @@ let string_of_readyState = (readyState) =>
     | [@bs.as "open"] `open_(unit => unit)
     | `ping(Node.Buffer.t => unit)
     | `pong(Node.Buffer.t => unit)
+    | `error(Dom.errorEvent => unit)
 ]) => t = "";
 
 [@bs.send] external send: (t, string) => unit = "";
