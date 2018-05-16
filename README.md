@@ -43,3 +43,12 @@ ws
 |. on(`open_(() => Js.log("Opened!")))
 );
 ```
+
+Send
+```
+let ws = WebSocket.make("wss://www.example.com");
+WebSocket.(
+ws
+|. send("Hello World!")
+);
+```

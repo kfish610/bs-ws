@@ -33,3 +33,5 @@ let string_of_readyState = (readyState) =>
     | `ping(Node.Buffer.t => unit)
     | `pong(Node.Buffer.t => unit)
 ]) => t = "";
+
+[@bs.send] external send: (t, string) => unit = "";
