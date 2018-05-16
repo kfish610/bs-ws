@@ -2,6 +2,11 @@
 
 Simple node websocket implementation for Reason
 
+[![npm](https://img.shields.io/npm/v/bs-ws.svg)](https://www.npmjs.com/package/bs-ws)
+
+[![GitHub issues](https://img.shields.io/github/issues/kfish610/bs-ws.svg)](https://github.com/kfish610/bs-ws/issues)
+
+
 # Installation
 
 ```
