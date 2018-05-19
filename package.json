@@ -1,6 +1,6 @@
 {
   "name": "bs-ws",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -20,6 +20,7 @@
   "repository": "github:kfish610/bs-ws",
   "description": "ws bindings for Reason",
   "dependencies": {
+    "isomorphic-ws": "^4.0.1",
     "ws": "^5.1.1"
   },
   "homepage": "https://github.com/kfish610/bs-ws",

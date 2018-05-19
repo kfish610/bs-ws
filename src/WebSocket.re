@@ -23,8 +23,8 @@ let string_of_readyState = (readyState) =>
   | CLOSED => "CLOSED"
   };
 
-[@bs.new] [@bs.module] external make: string => t = "ws";
-[@bs.new] [@bs.module] external makeWithProtocols: (string, array(string)) => t = "ws";
+[@bs.new] [@bs.module] external make: string => t = "isomorphic-ws";
+[@bs.new] [@bs.module] external makeWithProtocols: (string, array(string)) => t = "isomorphic-ws";
 [@bs.get] external getReadyState: t => readyStateType = "readyState";
 
 [@bs.send] external on: (t, [@bs.string] [
