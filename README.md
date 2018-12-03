@@ -32,22 +32,22 @@ Simple Example
 let ws = WebSocket.make("wss://www.example.com");
 WebSocket.(
 ws
-|. on(`message((data) => Js.log("Message: " ++ data)))
-|. on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
-|. on(`open_(() => Js.log("Opened!")))
-|. on(`error(error => Js.log("Error: " ++ ErrorEvent.message(error))))
+-> on(`message((data) => Js.log("Message: " ++ data)))
+-> on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
+-> on(`open_(() => Js.log("Opened!")))
+-> on(`error(error => Js.log("Error: " ++ ErrorEvent.message(error))))
 );
 ```
 
 Example with subprotocols
 ```
-let ws = WebSocket.makeWithProtocols("wss://gateway.discord.gg/?v=6&encoding=json", [| "soap" |]);
+let ws = WebSocket.makeWithProtocols("wss://www.example.com", [| "soap" |]);
 WebSocket.(
 ws
-|. on(`message((data) => Js.log("Message: " ++ data)))
-|. on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
-|. on(`open_(() => Js.log("Opened!")))
-|. on(`error(error => Js.log("Error: " ++ ErrorEvent.message(error))))
+-> on(`message((data) => Js.log("Message: " ++ data)))
+-> on(`close((code, reason) => Js.log("Closed: " ++ string_of_int(code) ++ reason)))
+-> on(`open_(() => Js.log("Opened!")))
+-> on(`error(error => Js.log("Error: " ++ ErrorEvent.message(error))))
 );
 ```
 
@@ -56,6 +56,6 @@ Send
 let ws = WebSocket.make("wss://www.example.com");
 WebSocket.(
 ws
-|. send("Hello World!")
+-> send("Hello World!")
 );
 ```
