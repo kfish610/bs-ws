@@ -1,6 +1,6 @@
 {
   "name": "bs-ws",
-  "version": "1.1.9",
+  "version": "1.1.0",
   "sources": [
     {
       "dir" : "src",
