@@ -1,20 +1,20 @@
-// This is the configuration file used by BuckleScript's build system bsb. Its documentation lives here: http://bucklescript.github.io/bucklescript/docson/#build-schema.json
-// BuckleScript comes with its own parser for bsconfig.json, which is normal JSON, with the extra support of comments and trailing commas.
 {
   "name": "bs-ws",
-  "version": "1.0.8",
+  "version": "1.1.9",
   "sources": [
     {
       "dir" : "src",
-      "public": "all"
-    },
-    {
-      "dir": "examples",
-      "type": "dev"
+      "subdirs" : true
     }
   ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": false
+  },
+  "suffix": ".bs.js",
   "warnings": {
     "error" : "+101"
   },
+  "namespace": "ws",
   "refmt": 3
 }
