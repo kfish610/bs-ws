@@ -7,21 +7,24 @@
     "clean": "bsb -clean-world"
   },
   "keywords": [
-    "BuckleScript",
-    "Node",
-    "WebSocket",
-    "ws"
+    "bucklescript",
+    "bs",
+    "reason",
+    "reasonml",
+    "websocket",
+    "websockets",
+    "ws",
+    "node"
   ],
   "author": "kfish610 <kfish610@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^5.2.1"
   },
   "repository": "github:kfish610/bs-ws",
   "description": "ws bindings for Reason",
   "dependencies": {
-    "isomorphic-ws": "^4.0.1",
-    "ws": "^6.2.1"
+    "ws": "^7.2.0"
   },
   "homepage": "https://github.com/kfish610/bs-ws",
   "bugs": {

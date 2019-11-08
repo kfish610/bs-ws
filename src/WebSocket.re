@@ -34,6 +34,6 @@ let string_of_readyState = (readyState) =>
     | `ping(Node.Buffer.t => unit)
     | `pong(Node.Buffer.t => unit)
     | `error(Dom.errorEvent => unit)
-]) => t = "";
+]) => t = "on";
 
-[@bs.send] external send: (t, string) => unit = "";
+[@bs.send] external send: (t, string) => unit = "send";
