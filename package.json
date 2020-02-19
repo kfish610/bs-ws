@@ -19,12 +19,12 @@
   "author": "kfish610 <kfish610@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^5.2.1"
+    "bs-platform": "^7.1.0"
   },
   "repository": "github:kfish610/bs-ws",
   "description": "ws bindings for Reason",
   "dependencies": {
-    "ws": "^7.2.0"
+    "ws": "^7.2.1"
   },
   "homepage": "https://github.com/kfish610/bs-ws",
   "bugs": {
