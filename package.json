@@ -1,6 +1,6 @@
 {
   "name": "bs-ws",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
